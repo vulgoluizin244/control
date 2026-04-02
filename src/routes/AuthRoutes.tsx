@@ -1,0 +1,22 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import LoginScreen from "../screens/LoginScreen";
+import RegisterScreen from "../screens/RegisterScreen";
+import AboutScreen from "../screens/AboutScreen";
+
+const Stack = createNativeStackNavigator();
+
+export default function AuthRoutes() {
+    return (
+        <Stack.Navigator>
+
+            <Stack.Screen name="login" component={LoginScreen} options={{title:""}}/>
+            
+            <Stack.Screen name="Cadrastro" component={RegisterScreen} options={{title:""}}/>
+
+            
+            <Stack.Screen name="sobre" component={AboutScreen} options={{title:""}}/>
+
+        </Stack.Navigator>
+    );
+}
